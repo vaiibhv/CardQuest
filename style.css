@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #102a43, #243b55);
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 15px 0;
+    color: #ffd166;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.stat-box {
+    background: white;
+    color: #102a43;
+    padding: 12px;
+    border-radius: 10px;
+    flex: 1;
+    font-weight: bold;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 22px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #ffd166;
+    color: #102a43;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffb703;
+}
+
+#message {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #ffd166;
+    font-weight: bold;
+}
+
+#cardGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Playing Cards */
+
+.card {
+    height: 110px;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    user-select: none;
+    color: #111;
+}
+
+.card.hidden {
+    background: repeating-linear-gradient(
+        45deg,
+        #17365D,
+        #17365D 5px,
+        #24476B 5px,
+        #24476B 10px
+    );
+    border: 3px solid white;
+}
+
+.card.hidden::after {
+    content: "♠";
+    color: white;
+    font-size: 35px;
+}
+
+.card.red {
+    color: #d00000;
+}
+
+.card.black {
+    color: #111;
+}
+
+.card .rank {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.card .suit {
+    font-size: 38px;
+}
+
+.card.matched {
+    background: #d8f3dc;
+    border: 3px solid #38b000;
+    cursor: default;
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+/* Mobile Screen */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #cardGrid {
+        gap: 8px;
+    }
+
+    .card {
+        height: 90px;
+    }
+
+    .card .suit {
+        font-size: 30px;
+    }
+
+    .stats {
+        gap: 5px;
+    }
+
+    .stat-box {
+        padding: 9px 4px;
+        font-size: 13px;
+    }
+}
