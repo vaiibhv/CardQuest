@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CardQuest: Interactive Card Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>CardQuest</h1>
+            <p>Flip the cards and find all matching pairs!</p>
+        </header>
+
+        <div class="game-info">
+
+            <div class="info-box">
+                <h3>Moves</h3>
+                <p id="moves">0</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Time</h3>
+                <p id="timer">00:00</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Matches</h3>
+                <p id="matches">0 / 8</p>
+            </div>
+
+        </div>
+
+        <div class="game-message" id="message">
+            Find all matching pairs!
+        </div>
+
+        <div class="card-grid" id="cardGrid">
+
+        </div>
+
+        <div class="game-controls">
+
+            <button id="startBtn">Start Game</button>
+
+            <button id="restartBtn">Restart Game</button>
+
+        </div>
+
+        <footer>
+            <p>CardQuest - Memory Matching Game</p>
+            <p>Developed using HTML, CSS and JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
